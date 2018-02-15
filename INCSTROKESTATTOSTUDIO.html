@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="bodystyle.css">
+</head>
+<body>
+<h1>INK STROKES TATTO STUDIO</h1>
+<div class="topnav">
+  <a href="#home">Home</a>
+  <a href="Latest.html">Latest</a>
+  <a href="#appointment">Appointment</a>
+  <a href="#about">About</a>
+</div>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="backgroundimg.jpg" style="width:100%">
+<div class="tabmaterial">"Have been working with ink from 5 years.<br> Several satisfied customers.
+	<br>Done intership in reputed tattoo studio.<br>We ink better."</div>    <div class="text">Tattoos ... are the stories in your heart, written on your skin.</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="backgroundimg2.jpg" style="width:100%">
+<div class="tabmaterial">"Have been working with ink from 5 years.<br> Several satisfied customers.
+	<br>Done intership in reputed tattoo studio.<br>We ink better."</div>
+    <div class="text">Tattoos made my skin more "me."</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="backgroundimg3.jpg" style="width:100%">
+<div class="tabmaterial">"Have been working with ink from 5 years.<br> Several satisfied customers.
+	<br>Done intership in reputed tattoo studio.<br>We ink better."</div>
+    <div class="text">Tattoos have a power and magic all their own. They decorate the body but they also enhance the soul.</div>
+  </div>
+
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center" position="bottom">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+
+<script>
+
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+
+</body>
+</html>
